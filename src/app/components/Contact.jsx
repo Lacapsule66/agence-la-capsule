@@ -6,10 +6,12 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
   const [toggleRes , setToggleRes] = useState(false)
   const form = useRef();
+  const[message, setMessage] = useState(false)
   const sendEmail = (e) => {
     e.preventDefault();
+  
 
-    emailjs.sendForm('service_ovl6qu3', 'template_9h4m9t1', form.current, 'mfgTE9qT16rjS6y-3')
+    emailjs.sendForm('service_rbymofs', 'template_9h4m9t1', form.current, 'mfgTE9qT16rjS6y-3')
       .then((result) => {
           console.log(result.text);
           setToggleRes("Message envoyé !")
@@ -234,9 +236,9 @@ export default function Contact() {
                   </label>
                   <div className="mt-1">
                     <input
-                      type="text"
-                      name="first-name"
-                      id="first-name"
+                      type="from_name"
+                      name="from_name"
+                      id="from_name"
                       autoComplete="given-name"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
@@ -279,7 +281,7 @@ export default function Contact() {
                 <div>
                   <div className="flex justify-between">
                     <label
-                      htmlFor="phone"
+                    
                       className="block text-sm font-medium text-gray-900"
                     >
                       Numéro de téléphone
@@ -290,9 +292,9 @@ export default function Contact() {
                   </div>
                   <div className="mt-1">
                     <input
-                      type="text"
-                      name="phone"
-                      id="phone"
+                     id = "phone"
+                     name = "phone"
+                       htmlFor="phone"
                       autoComplete="tel"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                       aria-describedby="phone-optional"
@@ -301,16 +303,16 @@ export default function Contact() {
                 </div>
                 <div className="sm:col-span-2">
                   <label
-                    htmlFor="subject"
+                    htmlFor="user_name"
                     className="block text-sm font-medium text-gray-900"
                   >
-                   Titre du message
+                   Indiquez l'heure à laquelle vous souhaitez être contacté
                   </label>
                   <div className="mt-1">
                     <input
-                      type="text"
-                      name="subject"
-                      id="subject"
+                      type="rappel"
+                      name="rappel"
+                      id="rappel"
                       className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                     />
                   </div>
