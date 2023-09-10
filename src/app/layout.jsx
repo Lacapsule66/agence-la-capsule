@@ -1,9 +1,11 @@
-
+import { Analytics } from '@vercel/analytics/react';
 import Footer from './components/Footer'
 import Header from './components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -15,7 +17,7 @@ export const metadata = {
   },
     referrer: 'origin-when-cross-origin',
   alternates :{
-    canonical: "https://www.agence-la-capsule.fr/"
+    canonical: "https://sante.agence-la-capsule.fr/"
   },
   generator : "NextJS",
   applicationName : "Agence web la Capsule",
@@ -49,11 +51,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
+  
+    
+  <Script src="https://www.googletagmanager.com/gtag/js?id=G-07152E5211" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-07152E5211');
+        `}
+      </Script>
+
+     
+
       <body className={inter.className}>
         <Header />
         {children}
         <Footer />
-        <Analytics />
+        <Analytics/>
+        
         </body>
     </html>
   )
