@@ -5,11 +5,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const anim = () => {
     const tl = gsap.timeline()
-  tl.to("#scale", {
-    scale: 1,
-    duration: 0.6,
-    ease: "power1.inOut",
-  });
+    tl.fromTo( '#scale', {
+      opacity: 0,
+      y: 100,
+      },
+      {
+      
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "elastic.out(1, 0.3)",
+      } ,0.33)
     tl.to(
     "#scale2",
     {
@@ -98,4 +104,20 @@ export const scale3 = () => {
      
     }
   );
+};
+
+// play video on scroll
+export const playVideo = () => {
+  gsap.to("#video", {
+    scrollTrigger: {
+      trigger: "#video",
+      start: "top 80%",
+      end: "top 50%",
+      onSnapComplete: () => {
+        videoRef.current.play();
+        
+    },
+    }
+  });
+
 };

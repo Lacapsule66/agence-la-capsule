@@ -5,7 +5,7 @@ export const metadata = {
   title: "L'équipe - Agence web la Capsule",
   description: "Découvrez l'équipe de l'agence web la Capsule. Nous sommes spécialisés dans la création de sites web pour les professionnels de la santé.",
   alternates :{
-      canonical: "https://www.agence-la-capsule.fr/team/"
+      canonical: "https://sante.agence-la-capsule.fr/team"
     },
 };
 

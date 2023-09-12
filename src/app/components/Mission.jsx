@@ -1,13 +1,7 @@
 import Image from "next/image"
 
 /* This example requires Tailwind CSS v2.0+ */
-const stats = [
-    { label: 'Founded', value: '2021' },
-    { label: 'Employees', value: '5' },
-    { label: 'Beta Users', value: '521' },
-    { label: 'Raised', value: '$25M' },
-  ]
-  
+
   export default function Mission() {
     return (
       <div id="toggle" className="relative bg-white py-16 sm:py-24">
@@ -73,7 +67,7 @@ const stats = [
                     </div>
   
                     <div className="mt-4">
-                      <p className="text-base font-semibold text-indigo-200">Lona Pratz, CEO at Agence La Capsule</p>
+                      <p className="text-base font-semibold text-indigo-200">Sophie, CEO at Agence La Capsule</p>
                     </div>
                   </blockquote>
                 </div>
@@ -114,6 +108,8 @@ const stats = [
            
           </div>
         </div>
+       
+
       </div>
     )
   }

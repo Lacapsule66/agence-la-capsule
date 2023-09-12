@@ -9,6 +9,7 @@ import { anim } from "./anim/anim";
 import Seo from "./components/Seo";
 import Phone from "./components/Phone";
 import Techno from "./components/Techo";
+import Video from "./components/Video";
 
 
 export default function Home() {
@@ -16,8 +17,8 @@ export default function Home() {
     <>
       <First />
       <Mission />
+      <Video />
       <Pricing />
-      <Seo />
       <LastCreate />
       <Techno />
       <Team />

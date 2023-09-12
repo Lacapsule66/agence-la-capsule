@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import LastCreate from "../components/Lastcreate";
+import Search from "../components/Search";
 export const metadata = {
     title: "Annuaire - Agence web la Capsule",
     description: "Découvrez les professionnels de la santé qui nous font confiance pour la création de leur site web.",
     alternates :{
-        canonical: "https://www.agence-la-capsule.fr/annuaire/"
+        canonical: "https://sante.agence-la-capsule.fr/annuaire"
       },
 };
 
@@ -91,6 +92,7 @@ export default function page() {
           <div className="relative pt-6 pb-16 sm:pb-24">
               <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
                   <div className="text-center">
+                  
                       <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                           <span className="block xl:inline">
                               Nous allons bientot référencés ici
@@ -125,6 +127,6 @@ export default function page() {
                   </div>
               </main>
           </div>
-      </div><LastCreate /></>
+      </div><LastCreate />  <Search /></>
   );
 }

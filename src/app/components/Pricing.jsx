@@ -4,12 +4,24 @@ import Seo from './Seo'
 import Link from 'next/link'
 
 const includedFeatures = [
-  'Création du site internet avec mise en page préconcus',
+  'Création du site internet',
   'Choix du nom de domaine',
   'Déploiement du site internet sur un serveur sécurisé',
+
   
 ]
+const includedFeatures2 = [
+  'Création du site internet',
+  'Choix du nom de domaine',
+  'Déploiement du site internet sur un serveur sécurisé',
+  'Référencement Google Seo',
+  'Suivi du référencement',
+  'Optimisation du référencement',
+  'Optimisation du site internet',
+  'Création de la page Google My Business'
 
+  
+]
 export default function Pricing() {
   return (
     <div id='toggle2' className="bg-gray-100">
@@ -24,6 +36,9 @@ export default function Pricing() {
             Pas de mauvaise surprise, pas de frais cachés.
             </span>
           </h3>
+          <p className="mt-6 text-center text-xl text-gray-500">
+          Nous proposons des tarifs abordables qui correspondent aux besoins et contraintes financières de votre profession, vous permettant ainsi de bénéficier d'un site internet professionnel à un prix compétitif.
+          </p>
           </div>
         </div>
       </div>
@@ -33,10 +48,10 @@ export default function Pricing() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
               <div className="flex-1 bg-white px-6 py-8 lg:p-12">
-                <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Création du site avec mise en page préconcus</p>
+                <p className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Création du site </p>
                 <p className="mt-6 text-base text-gray-500">
-                  Nous avons créer a l'avance trois mise en page pour votre site internet. Vous pouvez choisir celle qui vous convient le mieux.
-                </p>
+ Nous élaborerons pour vous un site qui correspond à votre activité, a votre patientelle et à vos besoins. Une fois le site créé, nous le mettrons en ligne sur un serveur sécurisé.
+                 </p>
                 <div className="mt-8">
                   <div className="flex items-center">
                     <h4 className="flex-shrink-0 pr-4 bg-white text-sm tracking-wider font-semibold uppercase text-indigo-600">
@@ -85,10 +100,9 @@ export default function Pricing() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
               <div className="flex-1 bg-white px-6 py-8 lg:p-12">
-                <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Création du site entièrement personnalisable</h3>
+                <h3 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">Création du site entièrement + référencement google Seo</h3>
                 <p className="mt-6 text-base text-gray-500">
-                  Avec ce forfait, nous créons votre site internet de A à Z. Vous pouvez choisir la mise en page, les couleurs, les polices, les images, etc.
-                  Nous vous guidons dans le choix de ces éléments pour que votre site internet soit le plus adapté à votre activité.
+                  Avec ce forfait, nous créons votre site internet et nous nous occupons de son référencement sur google. Nous vous garantissons ainsi une visibilité optimale sur le web.
                 </p>
                 <div className="mt-8">
                   <div className="flex items-center">
@@ -98,7 +112,7 @@ export default function Pricing() {
                     <div className="flex-1 border-t-2 border-gray-200" />
                   </div>
                   <ul role="list" className="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
-                    {includedFeatures.map((feature) => (
+                    {includedFeatures2.map((feature) => (
                       <li key={feature} className="flex items-start lg:col-span-1">
                         <div className="flex-shrink-0">
                           <CheckCircleIcon className="h-5 w-5 text-green-400" aria-hidden="true" />

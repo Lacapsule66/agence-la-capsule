@@ -3,7 +3,7 @@ import Image from "next/legacy/image"
 /* This example requires Tailwind CSS v2.0+ */
 const people = [
   {
-    name: 'Lona Pratz',
+    name: 'Sophie',
     role: 'La présidente',
     imageUrl:
       '/lona.avif',

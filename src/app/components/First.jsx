@@ -2,6 +2,12 @@
 import React, { useEffect } from "react";
 import { anim, scale2, scale3, toggle, toggle2 } from "../anim/anim";
 import Image from "next/legacy/image";
+import gsap from "gsap/dist/gsap";
+import { SplitText } from "gsap/dist/SplitText";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
+
 
 const incentives = [
   {
@@ -20,6 +26,31 @@ const incentives = [
 
 export default function First() {
   useEffect(() => {
+    const split = new SplitText(".text", { type: "chars, words" });
+    gsap.fromTo(split.words, {
+  
+     
+      y: 150,
+      // skewY: 10,
+      // skewX: 10,
+      // scale: 0.5,
+      // rotation: 90,
+  
+    }, {
+      opacity: 1,
+      y: 0,
+      skewY: 0,
+      skewX: 0,
+      scale: 1,
+      rotation: 0,
+      stagger: 0.08,
+      duration: 0.66,
+      ease: "expo"
+      
+    });
+     
+  }, [])
+  useEffect(() => {
     anim();
     toggle();
     toggle2();
@@ -31,32 +62,47 @@ export default function First() {
         <div className="max-w-2xl mx-auto px-4 lg:max-w-none">
           <div className="grid grid-cols-1 items-center gap-y-10 gap-x-16 lg:grid-cols-2">
             <div>
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-            <span className="block xl:inline">Agence La Capsule</span>{" "}
-            <span className="block text-indigo-600 xl:inline">
+            <h1 className="text-4xl tracking-tight  font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            <div className=" overflow-hidden">
+            <span className="block xl:inline text overflow-hidden  ">Agence La Capsule</span>{" "}
+            
+            <span className="block text-indigo-600 xl:inline text ">
            Santé
             </span>
+            </div>
           </h1>
-              <p id="scale2" className="mt-4 text-2xl scale-50 text-gray-700 mt-4">
+              <p className="mt-4 text-2xl  text-gray-700 mt-4">
                 La Capsule est une agence web spécialisée dans la création de
                 sites internet et d'applications pour les professionels de
                 santé. Nous vous accompagnons dans la création de votre site
                 internet, de votre application mobile ou de votre application
                 web.
               </p>
+              <div className="aspect-w-3 aspect-h-2 md:hidden  bg-gray-100 rounded-lg overflow-hidden">
+              <Image
+                src="/image.webp"
+                height={600}
+                width={800}
+                alt=""
+                id="scale"
+                style={{height : "100%", width : "100%"}}
+                className="object-center object-cover "
+              />
+            </div>
               <p className="mt-4 text-2xl text-gray-700">
                 Que vous soyez médecin, infirmier, kinésithérapeute, dentiste, ou encore pharmacien, nous vous accompagnons dans la création de votre site internet.
               </p>
             </div>
           
-            <div className="aspect-w-3 aspect-h-2 bg-gray-100 rounded-lg overflow-hidden">
+            <div className="aspect-w-3 aspect-h-2  max-md:hidden bg-gray-100 rounded-lg overflow-hidden">
               <Image
                 src="/image.webp"
-                height={390}
+                height={600}
                 width={800}
                 alt=""
                 id="scale"
-                className="object-center object-cover scale-50"
+                style={{height : "100%", width : "100%"}}
+                className="object-center object-cover "
               />
             </div>
           </div>
